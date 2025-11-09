@@ -1,0 +1,11 @@
+*.pyc
+__pycache__/
+.vscode/
+.DS_Store
+*.pem
+*.key
+.env
+assets/*.zip
+*.iso
+node_modules/
+venv/
