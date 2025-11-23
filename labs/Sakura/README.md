@@ -1,5 +1,5 @@
 # “Sakura” – TryHackMe Room Write-Up  
-*By [Anmol] 
+By [Anmol] 
 
 ---
 
@@ -17,7 +17,7 @@ I opened the provided image and downloaded it to inspect metadata and embedded c
 ![Screenshot](img1.png)  
 I viewed the SVG source and noticed a background filled with binary digits—when translated they pointed me to look at the metadata.  
 
-![[usr 1.png]]
+![username](usr1.png)
 
 Within the file metadata I found a username reference **SakuraSnowAngelAiko** which became my pivot.
 
@@ -29,7 +29,8 @@ Within the file metadata I found a username reference **SakuraSnowAngelAiko** wh
 
 From the username I carried out Google searches and found her GitHub profile and Twitter/X account.
 
-![Screenshot](img2.png)  
+![Screenshot](img2.png)
+![Screenshot](twitter.png)
 I located her under handle **@AikoAbe3** and her display name **Aiko Abe**.  
 I then found her public PGP key repository.
 
@@ -39,7 +40,7 @@ Using:
 gpg pubkey
 ```
 
-![[gpg_key.png]]
+![[gpg_key.png]](gpg.png)
 
 I extracted an email address: **SakuraSnowAngel83@protonmail.com**.
 
@@ -53,7 +54,10 @@ I extracted an email address: **SakuraSnowAngel83@protonmail.com**.
 
 Within her GitHub “ETH” repository I found a mining script:
 
-![Screenshot](img3.png)  
+![Screenshot](pgp.png)
+
+![Screenshot](img3.png)
+![Screenshot](pass.png)
 It contained:
 ```
 stratum://0xa102397dbeeBeFD8cD2F73A89122fCdB53abB6ef.Aiko:pswd@eu1.ethermine.org:4444
@@ -85,7 +89,8 @@ Using the SSID I queried Wigle.net and found the BSSID corresponding to Tokyo.
 
 One tweet showed cherry blossoms and the Washington Monument in the background:
 
-![Screenshot](img6.png)  
+![Screenshot](img6.png) 
+![Screenshot](lounge.png)
 This led to airport code **DCA** (Washington D.C.).  
 Later I found another map image showing a large lake in Japan:
 
